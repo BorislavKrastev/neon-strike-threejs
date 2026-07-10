@@ -24,6 +24,8 @@ Then open the address shown in the terminal. The project is also ready for GitHu
 - `Space`: jump
 - `R`: reload
 - `1`–`4` or `Q`: switch weapons
+- Mouse wheel: switch weapons
+- `G`: throw a frag grenade
 
 Touch controls are included for mobile browsers.
 
@@ -33,7 +35,9 @@ Touch controls are included for mobile browsers.
 - Reactive combat bots with patrol, line-of-sight, strafing, firing, death, and respawn behavior
 - Headshots, armor, reloads, recoil, spread, sprinting, jumping, and collision
 - Procedural tactical arena with cover lanes and spawn pads
-- Tracers, muzzle flashes, sparks, shell casings, hit markers, damage vignette, kill feed, and synthetic audio
+- Procedural industrial materials, colored arena lights, emissive trims, film grain, and ACES tone mapping
+- Tracers, muzzle flashes, persistent impact marks, sparks, smoke, shell casings, explosions, screen shake, hit markers, damage vignette, kill feed, and synthetic audio
+- Physics barrels that react to bullets and grenades, explode, and push nearby props
 - High-quality/performance toggle and adaptive pixel ratio
 - Zero build step; static-hosting friendly
 
