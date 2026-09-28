@@ -145,6 +145,14 @@ export class Engine {
       const gtao = new GTAOPass(this.scene, this.camera, size.x, size.y);
       gtao.updateGtaoMaterial({ radius: 0.9, distanceExponent: 1.6, thickness: 1.2, scale: 1.1, samples: 12 });
       gtao.blendIntensity = 0.85;
+      // keep sprites, particles and decals out of the AO G-buffer
+      gtao.overrideVisibility = function () {
+        const cache = this._visibilityCache;
+        this.scene.traverse(o => {
+          cache.set(o, o.visible);
+          if (o.isPoints || o.isLine || o.isSprite || (o.material && o.material.transparent)) o.visible = false;
+        });
+      };
       comp.addPass(gtao);
       this.gtao = gtao;
     }
